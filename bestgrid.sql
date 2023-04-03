@@ -68,7 +68,7 @@ CREATE TABLE if not exists bestgrid.subject(
   subjectID INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(50) NOT NULL,
   hours INT NULL default 0,
-  classType INT NULL default 0,
+  classType VARCHAR(50) NULL default " ",
   PRIMARY KEY (subjectID)
   );
   

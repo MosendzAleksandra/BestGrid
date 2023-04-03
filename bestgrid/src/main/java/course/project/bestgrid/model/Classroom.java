@@ -1,14 +1,16 @@
 package course.project.bestgrid.model;
 
-import course.project.bestgrid.model.enumerate.ClassType;
-
 public class Classroom {
     private int classroomNumber;
-    private Building building;
-    private int capacity; 
-    private ClassType type;
+    private String type;
     
     public Classroom() {
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
     }
     public int getClassroomNumber() {
         return classroomNumber;
@@ -16,22 +18,5 @@ public class Classroom {
     public void setClassroomNumber(int classroomNumber) {
         this.classroomNumber = classroomNumber;
     }
-    public Building getBuilding() {
-        return building;
-    }
-    public void setBuilding(Building building) {
-        this.building = building;
-    }
-    public int getCapacity() {
-        return capacity;
-    }
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-    public ClassType getType() {
-        return type;
-    }
-    public void setType(ClassType type) {
-        this.type = type;
-    }
+    
 }

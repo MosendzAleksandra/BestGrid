@@ -1,18 +1,15 @@
 package course.project.bestgrid.model;
 
-import course.project.bestgrid.model.enumerate.LessonType;
+import java.sql.Time;
+
 import course.project.bestgrid.model.enumerate.WeekDay;
 
 public class Lesson {
     private int lessonID;
     private WeekDay weekday;
-    private String week;
-    private String time;
-    private LessonType type;
-
+    private Time time;
     private Classroom classroom ;
-    private Building building;  // Опираясь на данные classroom или наоборот
-
+    
     private Group group; // или группа или поток
     private Flow flow; 
 
@@ -21,6 +18,13 @@ public class Lesson {
     
     public Lesson() {
     }
+    public Time getTime() {
+        return time;
+    }
+    public void setTime(Time time) {
+        this.time = time;
+    }
+
     public int getLessonID() {
         return lessonID;
     }
@@ -33,36 +37,14 @@ public class Lesson {
     public void setWeekday(WeekDay weekday) {
         this.weekday = weekday;
     }
-    public String getWeek() {
-        return week;
-    }
-    public void setWeek(String week) {
-        this.week = week;
-    }
-    public String getTime() {
-        return time;
-    }
-    public void setTime(String time) {
-        this.time = time;
-    }
-    public LessonType getType() {
-        return type;
-    }
-    public void setType(LessonType type) {
-        this.type = type;
-    }
+    
     public Classroom getClassroom() {
         return classroom;
     }
     public void setClassroom(Classroom classroom) {
         this.classroom = classroom;
     }
-    public Building getBuilding() {
-        return building;
-    }
-    public void setBuilding(Building building) {
-        this.building = building;
-    }
+    
     public Group getGroup() {
         return group;
     }
